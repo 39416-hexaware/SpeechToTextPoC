@@ -117,6 +117,7 @@ var bot = new builder.UniversalBot(connector, function (session) {
 // Utilities
 //=========================================================
 function hasAudioAttachment(session) {
+    console.log('Attachment Type ----- ',session.message.attachments[0].contentType);
     return session.message.attachments.length > 0 &&
         (session.message.attachments[0].contentType === 'audio/wav' ||
             session.message.attachments[0].contentType === 'application/octet-stream');
