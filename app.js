@@ -120,7 +120,7 @@ function hasAudioAttachment(session) {
     console.log('Attachment Type ----- ',session.message.attachments[0].contentType);
     return session.message.attachments.length > 0 &&
         (session.message.attachments[0].contentType === 'audio/wav' ||
-            session.message.attachments[0].contentType === 'application/octet-stream');
+            session.message.attachments[0].contentType === 'application/octet-stream' || session.message.attachments[0].contentType === 'video/mp4');
 }
 
 function getAudioStreamFromMessage(message) {
